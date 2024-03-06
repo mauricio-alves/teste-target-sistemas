@@ -1,37 +1,36 @@
-// 1) Observe o trecho de código abaixo (traduzido para JS):
+// 1) Observe o trecho de código abaixo:
 // Ao final do processamento, qual será o valor da variável soma?
-let indice = 13;
-let soma = 0;
+let index = 13;
+let sum = 0;
 let k = 0;
 
-while (k < indice) {
+while (k < index) {
   k = k + 1;
-  soma = soma + k;
+  sum = sum + k;
 }
 
-console.log("valor de soma:", soma); // Resposta: 91
+console.log("valor de soma:", sum); // Resposta: 91
 
 // 2) Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre será a soma dos 2 valores anteriores (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem que desejar onde, informado um número, ele calcule a sequência de Fibonacci e retorne uma mensagem avisando se o número informado pertence ou não a sequência.
 // IMPORTANTE: Esse número pode ser informado através de qualquer entrada de sua preferência ou pode ser previamente definido no código;
-function verificarFibonacci(num) {
+function verifyFibonacci(num) {
   let a = 0;
   let b = 1;
-  let soma;
+  let sum;
 
   while (a <= num) {
     if (a === num) {
       return console.log(`${num} pertence à sequência de Fibonacci.`);
     }
-    soma = a + b;
+    sum = a + b;
     a = b;
-    b = soma;
+    b = sum;
   }
-
   return console.log(`${num} não pertence à sequência de Fibonacci.`);
 }
 
-verificarFibonacci(13); // Resposta: 13 pertence à sequência de Fibonacci.
-verificarFibonacci(26); // Resposta: 26 não pertence à sequência de Fibonacci.
+verifyFibonacci(13); // Resposta: 13 pertence à sequência de Fibonacci.
+verifyFibonacci(26); // Resposta: 26 não pertence à sequência de Fibonacci.
 
 // 3) Descubra a lógica e complete o próximo elemento:
 
@@ -47,22 +46,21 @@ verificarFibonacci(26); // Resposta: 26 não pertence à sequência de Fibonacci
 
 // f) 2, 10, 12, 16, 17, 18, 19, ____ -> Resposta: 200. Sequência numérica baseada na letra inicial do número escrito por extenso (dois, dez, doze, dezesseis, dezessete, dezoito, dezenove, duzentos).
 
-// 4) Você está em uma sala com três interruptores, cada um conectado a uma lâmpada em uma sala diferente. Você não pode ver as lâmpadas da sala em que está, mas pode ligar e desligar os interruptores quantas vezes quiser. Seu objetivo é descobrir qual interruptor controla qual lâmpada.
-
-// Como você faria para descobrir, usando apenas duas idas até uma das salas das lâmpadas, qual interruptor controla cada lâmpada?
+// 4) Você está em uma sala com três interruptores, cada um conectado a uma lâmpada em uma sala diferente. Você não pode ver as lâmpadas da sala em que está, mas pode ligar e desligar os interruptores quantas vezes quiser. Seu objetivo é descobrir qual interruptor controla qual lâmpada. Como você faria para descobrir, usando apenas duas idas até uma das salas das lâmpadas, qual interruptor controla cada lâmpada?
 
 // Resposta: Ligue um dos interruptores e espere um pouco. Desligue e ligue um segundo interruptor. Vá até qualquer uma das três salas. Se a lâmpada estiver apagada, mas estiver quente, o interruptor que ligamos inicialmente está conectado a essa lâmpada. Se a lâmpada estiver acesa, o segundo interruptor que ligamos está conectado a essa lâmpada. Se a lâmpada estiver apagada e fria, o interruptor que deixamos desligado está conectado a essa lâmpada. Após identificar a qual lâmpada essa primeira sala está conectada, vá até uma das outras duas salas e repita a verificação. Dessa forma, com apenas duas idas até uma das salas das lâmpadas, podemos determinar qual interruptor controla cada lâmpada.
 
-// 5) Escreva um programa que inverta os caracteres de um string.
-// IMPORTANTE:
+// 5) Escreva um programa que inverta os caracteres de um string. IMPORTANTE:
 // a) Essa string pode ser informada através de qualquer entrada de sua preferência ou pode ser previamente definida no código;
 // b) Evite usar funções prontas, como, por exemplo, reverse;
-function inverterString(str) {
-  let resultado = "";
+
+function reverseString(str) {
+  let result = "";
+
   for (let i = str.length - 1; i >= 0; i--) {
-    resultado += str[i];
+    result += str[i];
   }
-  return console.log("resultado:", resultado);
+  return console.log("resultado:", result);
 }
 
-inverterString("Teste Target Sistemas"); // Resposta: sametsiS tegraT etseT
+reverseString("Teste Target Sistemas"); // Resposta: sametsiS tegraT etseT
